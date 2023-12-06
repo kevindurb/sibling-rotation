@@ -46,6 +46,7 @@ const supportedTags = [
   'strong',
   'p',
   'u',
+  'div',
 ];
 
 supportedTags.forEach((tag) => {

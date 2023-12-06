@@ -2,10 +2,10 @@ import { El } from './El.js';
 import { View } from './View.js';
 
 const rotation = {
-  east: ['monument', 'forest', 'west'],
-  forest: ['east', 'west', 'monument'],
-  monument: ['west', 'east', 'forest'],
-  west: ['forest', 'monument', 'east'],
+  farmers: ['monument', 'forest', 'west'],
+  forest: ['farmers', 'west', 'monument'],
+  monument: ['west', 'farmers', 'forest'],
+  west: ['forest', 'monument', 'farmers'],
 };
 
 class FamilyResult extends View {
