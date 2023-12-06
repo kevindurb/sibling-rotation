@@ -20,7 +20,7 @@ class FamilyResult extends View {
     const year = this.now.getFullYear();
     const receivingFamily = rotation[family][(year - 1) % 3];
     return [
-      El.h1(`Welcome ${this.capitalize(family)} Durbins!`),
+      El.h1(`🎅 Merry Christmas ${this.capitalize(family)} Durbins! 🦌`),
       El.h2(
         `Its ${year} and its your turn to give gifts to the `,
         El.u(this.capitalize(receivingFamily)),
