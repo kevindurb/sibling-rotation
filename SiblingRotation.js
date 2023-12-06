@@ -15,7 +15,7 @@ class SiblingRotation extends View {
   render() {
     if (this.family) return El.tag('family-result').attr('family', this.family);
     return [
-      El.h1().text('Welcome!'),
+      El.h1().text('Merry Christmas!'),
       El.ul(
         El.li(El.a().text('East').href('#east')),
         El.li(El.a().text('Forest').href('#forest')),
