@@ -1,5 +1,9 @@
 import { El } from './El.js';
 
+/**
+ * Base view with some render helpers
+ * @extends HTMLElement
+ */
 export class View extends HTMLElement {
   connectedCallback() {
     this.requestRender();
@@ -9,11 +13,16 @@ export class View extends HTMLElement {
     this.requestRender();
   }
 
+  /**
+   * append element to view
+   *
+   * @param {El | Node | string} el - element to append
+   */
   appendElement(el) {
     if (el instanceof El) {
-      this.appendChild(el.$el);
+      this.append(el.$el);
     } else {
-      this.appendChild(el);
+      this.append(el);
     }
   }
 
@@ -29,5 +38,10 @@ export class View extends HTMLElement {
     }
   }
 
+  /**
+   * Main render function
+   *
+   * @returns {void | string | El | Array<string | El>}
+   */
   render() {}
 }

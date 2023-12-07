@@ -2,6 +2,10 @@ import { El } from './El.js';
 import { View } from './View.js';
 
 class SiblingRotation extends View {
+  /**
+   * family name
+   * @type {string}
+   */
   family = window.location.hash.substring(1);
 
   constructor() {

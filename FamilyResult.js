@@ -11,6 +11,10 @@ const rotation = {
 class FamilyResult extends View {
   now = new Date();
 
+  /**
+   * @param {string} text
+   * @returns {string}
+   */
   capitalize(text) {
     return text.charAt(0).toUpperCase() + text.substring(1);
   }
