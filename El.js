@@ -43,7 +43,7 @@ export class El {
    * @returns {El}
    */
   static h2(...children) {
-    return this.tag('h1', ...children);
+    return this.tag('h2', ...children);
   }
 
   /**
@@ -52,7 +52,7 @@ export class El {
    * @returns {El}
    */
   static h3(...children) {
-    return this.tag('h1', ...children);
+    return this.tag('h3', ...children);
   }
 
   /**
@@ -61,7 +61,7 @@ export class El {
    * @returns {El}
    */
   static a(...children) {
-    return this.tag('h1', ...children);
+    return this.tag('a', ...children);
   }
 
   /**
@@ -70,7 +70,7 @@ export class El {
    * @returns {El}
    */
   static u(...children) {
-    return this.tag('h1', ...children);
+    return this.tag('u', ...children);
   }
 
   /**
