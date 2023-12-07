@@ -1,16 +1,8 @@
 export class El {
+  /**
+   * @type {HTMLElement}
+   */
   $el;
-
-  /** @type {(...children: Array<string | Node | El>) => El} */
-  static h1;
-  /** @type {(...children: Array<string | Node | El>) => El} */
-  static h2;
-  /** @type {(...children: Array<string | Node | El>) => El} */
-  static h3;
-  /** @type {(...children: Array<string | Node | El>) => El} */
-  static a;
-  /** @type {(...children: Array<string | Node | El>) => El} */
-  static u;
 
   /**
    * @param {string} tagName
@@ -34,6 +26,51 @@ export class El {
    */
   static tag(tagName, ...children) {
     return new El(tagName, ...children);
+  }
+
+  /**
+   * @static
+   * @param {Array<string | Node | El>} children
+   * @returns {El}
+   */
+  static h1(...children) {
+    return this.tag('h1', ...children);
+  }
+
+  /**
+   * @static
+   * @param {Array<string | Node | El>} children
+   * @returns {El}
+   */
+  static h2(...children) {
+    return this.tag('h1', ...children);
+  }
+
+  /**
+   * @static
+   * @param {Array<string | Node | El>} children
+   * @returns {El}
+   */
+  static h3(...children) {
+    return this.tag('h1', ...children);
+  }
+
+  /**
+   * @static
+   * @param {Array<string | Node | El>} children
+   * @returns {El}
+   */
+  static a(...children) {
+    return this.tag('h1', ...children);
+  }
+
+  /**
+   * @static
+   * @param {Array<string | Node | El>} children
+   * @returns {El}
+   */
+  static u(...children) {
+    return this.tag('h1', ...children);
   }
 
   /**
@@ -64,29 +101,3 @@ export class El {
     return this;
   }
 }
-
-const supportedTags = /** @type {const} */ ([
-  'h1',
-  'h2',
-  'h3',
-  'h4',
-  'h5',
-  'h6',
-  'a',
-  'ul',
-  'li',
-  'strong',
-  'p',
-  'u',
-  'div',
-]);
-
-supportedTags.forEach((tag) => {
-  /**
-   * @param {Array<string | Node | El>} children
-   * @returns {El}
-   */
-  El[tag] = function (...children) {
-    return this.tag(tag, ...children);
-  };
-});

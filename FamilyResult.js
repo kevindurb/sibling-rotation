@@ -1,7 +1,7 @@
 import { El } from './El.js';
 import { View } from './View.js';
 
-const rotation = {
+const rotation = /** @type {const} */ {
   farmers: ['monument', 'forest', 'west'],
   forest: ['farmers', 'west', 'monument'],
   monument: ['west', 'farmers', 'forest'],
